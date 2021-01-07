@@ -9,7 +9,7 @@ Created on Sat Nov  7 20:05:10 2020
 import matplotlib.pyplot as plt
 import pandas as pd
 
-data=pd.read_csv('C:\\Users\\hp\\Desktop\\Monu_Folder\\Python\\Linear Regression\\Salary_Data.csv')
+data=pd.read_csv('') #file location
 x=data.iloc[:,:-1].values
 y=data.iloc[:,1].values
 
