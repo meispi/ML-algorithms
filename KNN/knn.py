@@ -15,7 +15,10 @@ y = dataset.iloc[:,13].values #replace 13 with last column of the dataset with 0
 from sklearn.model_selection import train_test_split
 x_train, x_test, y_train, y_test = train_test_split(x, y, test_size = 0.20, random_state=42) #this resulted in the highest accuracy of 90% I have to find out why?
 
-from sklearn.preprocessing import StandardScaler #the next 3 lines of code normalizes the dataset to produce more accurate results, why?
+# Before making any actual predictions, it is important to scale the features so that all of them contribute uniformly to the final calculated distance.
+# Let's say if a feature can have a wide range of values then the calculated Euclidean distance for that particular feature will highly impact the final result.
+# This generally shouldn't be the case. Hence we normalize all of the features.
+from sklearn.preprocessing import StandardScaler
 scaler = StandardScaler()
 scaler.fit(x_train)
 
